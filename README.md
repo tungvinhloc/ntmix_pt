@@ -1,6 +1,6 @@
-# NTMIX Pro – Phần mềm Chấm Trắc Nghiệm Trực Tuyến (Web App)
+# NTMark VX – Phần mềm Chấm Trắc Nghiệm Trực Tuyến (Web App)
 
-**NTMIX Pro** là ứng dụng web (PWA) hỗ trợ giáo viên chấm bài thi trắc nghiệm nhanh chóng, chính xác ngay trên trình duyệt điện thoại (iOS/Android) và máy tính mà không cần cài đặt phần mềm phức tạp hay phụ thuộc máy chủ xử lý.
+**NTMark Pro** là ứng dụng web (PWA) hỗ trợ giáo viên chấm bài thi trắc nghiệm nhanh chóng, chính xác ngay trên trình duyệt điện thoại (iOS/Android) và máy tính mà không cần cài đặt phần mềm phức tạp hay phụ thuộc máy chủ xử lý.
 
 * **Tác giả:** Nguyễn Thanh Tùng – Giáo viên Toán, Trường THPT Vinh Xuân, Thành phố Huế.
 * **Trải nghiệm trực tiếp:** [https://tungvinhloc.github.io/ntmix_pt/](https://tungvinhloc.github.io/ntmix_pt/)
@@ -54,9 +54,9 @@
 ## 📂 Cấu trúc thư mục
 
 ```text
-ntmix/
-├── index.html          # Mã nguồn chính của ứng dụng Web App NTMIX Pro
-├── logo-ntmix.png      # Biểu tượng nhận diện ứng dụng
+ntmix_pt/
+├── index.html          # Mã nguồn chính của ứng dụng Web App NTMark VX
+├── logo-ntmark.png      # Biểu tượng nhận diện ứng dụng
 ├── huong_dan.pdf       # Tài liệu hướng dẫn sử dụng chi tiết
 ├── README.md           # Tài liệu giới thiệu dự án
 └── assets/             # Thư mục chứa mẫu phiếu trả lời trắc nghiệm (PDF & JPG)
