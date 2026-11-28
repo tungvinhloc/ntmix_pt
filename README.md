@@ -3,7 +3,7 @@
 **NTMIX Pro** là ứng dụng web (PWA) hỗ trợ giáo viên chấm bài thi trắc nghiệm nhanh chóng, chính xác ngay trên trình duyệt điện thoại (iOS/Android) và máy tính mà không cần cài đặt phần mềm phức tạp hay phụ thuộc máy chủ xử lý.
 
 * **Tác giả:** Nguyễn Thanh Tùng – Giáo viên Toán, Trường THPT Vinh Xuân, Thành phố Huế.
-* **Trải nghiệm trực tiếp:** [https://tungvinhloc.github.io/ntmix/](https://tungvinhloc.github.io/ntmix/)
+* **Trải nghiệm trực tiếp:** [https://tungvinhloc.github.io/ntmix_pt/](https://tungvinhloc.github.io/ntmix_pt/)
 
 ---
 
