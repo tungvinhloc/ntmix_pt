@@ -80,4 +80,4 @@ ntmix_pt/
 
 ## 📄 Bản quyền & Liên hệ
 
-Dự án được phát triển phục vụ công tác giảng dạy và kiểm tra đánh giá của giáo viên. Mọi ý kiến đóng góp hoặc báo lỗi xin vui lòng tạo **Issue** trực tiếp trên kho lưu trữ này.
+Dự án được phát triển phục vụ công tác giảng dạy và kiểm tra đánh giá của giáo viên. Mọi ý kiến đóng góp hoặc báo lỗi xin vui lòng tạo **Issue** trực tiếp trên kho lưu trữ này hoặc liên hệ với tác giả: Nguyễn Thanh Tùng, Giáo viên Toán, Trường THPT Vinh Xuân, thành phố Huế. **SĐT/Zalo**: 0972624052
