@@ -2,14 +2,14 @@
 <html>
 <head>
     <meta charset=utf8>
-<title>NTMIX Pro</title>
+<title>NTMark VX</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-    <link rel="apple-touch-icon" href="logo-ntmix.png">
-    <link rel="icon" type="image/png" href="logo-ntmix.png">
+    <link rel="apple-touch-icon" href="logo-ntmark.png">
+    <link rel="icon" type="image/png" href="logo-ntmark.png">
 <!-- Ẩn thanh công cụ Safari, chạy độc lập như App thật -->
 <meta name="apple-mobile-web-app-capable" content="yes">
 <!-- Đặt tên App hiển thị dưới icon -->
-<meta name="apple-mobile-web-app-title" content="NTMIX Pro">
+<meta name="apple-mobile-web-app-title" content="NTMark VX">
 <!-- Làm trong suốt thanh trạng thái (pin, sóng) -->
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="claude:viewport-fit-sides" content="cover">
@@ -1928,9 +1928,9 @@ html, body {
   <div class="overlay" id="menuOverlay"></div>
   <nav class="sidebar" id="sideMenu">
     <div class="sidebar-header">
-      <img src="logo-ntmix.png" width="56" height="56" style="border-radius: 14px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+      <img src="logo-ntmark.png" width="56" height="56" style="border-radius: 14px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
       <div>
-        <div style="font-weight: 800; font-size: 18px;">NTMIX Pro</div>
+        <div style="font-weight: 800; font-size: 18px;">NTMark VX</div>
         <div style="font-size: 13px; color: var(--muted); background: var(--warn-soft); color: var(--warn); padding: 2px 8px; border-radius: 12px; display: inline-block; margin-top: 4px; font-weight: bold;">Nguyễn Thanh Tùng</div>
       </div>
     </div>
@@ -2000,8 +2000,8 @@ html, body {
     <!-- TAB TRANG CHỦ MỚI -->
     <section id="v-home" class="view" aria-label="Trang chủ">
       <div class="card" style="text-align: center; padding: 40px 20px; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 55vh; border: none; background: transparent;">
-        <img src="logo-ntmix.png" width="120" height="120" alt="Logo NTMIX" style="border-radius: 24px; box-shadow: 0 8px 24px rgba(0,0,0,0.12); margin-bottom: 24px;">
-        <h1 style="font-size: 32px; font-weight: 900; color: var(--ink); margin-bottom: 12px; letter-spacing: -0.02em;">NTMIX Pro</h1>
+        <img src="logo-ntmark.png" width="120" height="120" alt="Logo ntmark" style="border-radius: 24px; box-shadow: 0 8px 24px rgba(0,0,0,0.12); margin-bottom: 24px;">
+        <h1 style="font-size: 32px; font-weight: 900; color: var(--ink); margin-bottom: 12px; letter-spacing: -0.02em;">NTMark VX</h1>
         <div style="font-size: 15px; color: var(--muted); line-height: 1.6; margin-bottom: 32px;">
           <b style="color: var(--fg); font-size: 17px;">Tác giả: Nguyễn Thanh Tùng</b><br>
           Giáo viên Toán trường THPT Vinh Xuân<br>Thành Phố Huế
@@ -3821,7 +3821,7 @@ function discOffsets(rad, step) {
   return o;
 }
 function bubbleScore(g, w, h, H, b, inOff, a0, a1) {
-  const omr = window.NTMIX_OMR_CFG || { minDark: 0.10, minFill: 0.15, eraseRatio: 0.60 };
+  const omr = window.ntmark_OMR_CFG || { minDark: 0.10, minFill: 0.15, eraseRatio: 0.60 };
   let s = 0,
     c = 0,
     darkCnt = 0;
@@ -3852,7 +3852,7 @@ function bubbleScore(g, w, h, H, b, inOff, a0, a1) {
   return Math.max(0, Math.min(1, 1 - mIn / ref));
 }
 function decideMarks(scores, thr) {
-  const omr = window.NTMIX_OMR_CFG || { minDark: 0.10, minFill: 0.15, eraseRatio: 0.60 };
+  const omr = window.ntmark_OMR_CFG || { minDark: 0.10, minFill: 0.15, eraseRatio: 0.60 };
   const minThr = Math.max(thr, omr.minDark);
   let mx = 0;
   scores.forEach(function (s) {
@@ -8294,7 +8294,7 @@ function paintMarks(c, sc, g, ver, lw, ringFn) {
 
     // Dòng tiêu đề trên cùng
     c.fillStyle = '#6b7280'; c.font = '500 26px ' + F; c.textAlign = 'left';
-    c.fillText('NTMIX · ' + (listName || 'Kết quả'), M, 72);
+    c.fillText('ntmark · ' + (listName || 'Kết quả'), M, 72);
     c.textAlign = 'right'; c.fillText('Bài ' + idx + '/' + n, W - M, 72);
 
     // SBD, Mã đề và Ngày tháng
@@ -8336,7 +8336,7 @@ function paintMarks(c, sc, g, ver, lw, ringFn) {
     let stuName = '';
     let stuCls = '';
     try {
-        // Tầng 1: Lấy từ bộ nhớ NTMIX mới
+        // Tầng 1: Lấy từ bộ nhớ ntmark mới
         const key = String(r.sbd || '').replace(/\D/g, '').replace(/^0+/, '');
         const lsStr = localStorage.getItem('omr.lists');
         if (lsStr) {
@@ -8348,7 +8348,7 @@ function paintMarks(c, sc, g, ver, lw, ringFn) {
             }
         }
         
-        // Tầng 2: Lấy từ bộ nhớ NTMIX cũ
+        // Tầng 2: Lấy từ bộ nhớ ntmark cũ
         if (!stuName) {
             const stdsStr = localStorage.getItem('omr.students');
             if (stdsStr) {
@@ -9273,7 +9273,7 @@ let qrState = { kind: 'idle' },
       setTimeout(first, 30);
     });
   else setTimeout(first, 200);
-  // --- KẾT NỐI TÍNH NĂNG MỞ RỘNG CỦA NTMIX ---
+  // --- KẾT NỐI TÍNH NĂNG MỞ RỘNG CỦA ntmark ---
   function getStudentInfo(sbd) {
     if (!sbd) return null;
     const key = String(sbd).trim().replace(/^0+/, '');
@@ -9329,7 +9329,7 @@ let qrState = { kind: 'idle' },
           rows.push([new Date(r.t).toLocaleString('vi-VN'), r.sbd, info.name, info.cls, r.md, p[0], p[1], p[2], r.total, r.max]);
       });
       const wb = XLSX.utils.book_new(); XLSX.utils.book_append_sheet(wb, XLSX.utils.aoa_to_sheet(rows), "BangDiem");
-      XLSX.writeFile(wb, `BangDiem_NTMIX_${Date.now()}.xlsx`);
+      XLSX.writeFile(wb, `BangDiem_ntmark_${Date.now()}.xlsx`);
       const msg = $('#resMsg'); if (msg) msg.textContent = 'Đã tải bảng điểm Excel.';
   };
 
@@ -9409,12 +9409,12 @@ let qrState = { kind: 'idle' },
           const view = listRes().slice().reverse(); if (!view.length) return;
           this.textContent = "⏳ Đang tạo ZIP..."; this.disabled = true;
           try {
-              let zip = new JSZip(); let folder = zip.folder("BaiCham_NTMIX");
+              let zip = new JSZip(); let folder = zip.folder("BaiCham_ntmark");
               for (let i=0; i<view.length; i++) {
                   let r = view[i]; let blob = await IMG.get(r.id);
                   if (blob) { let stu = getStudentInfo(r.sbd); let sName = stu && stu.name ? `_${stu.name}` : ""; folder.file(`${r.sbd}_${r.md}${sName}.jpg`, blob); }
               }
-              let content = await zip.generateAsync({type:"blob"}); saveAs(content, `AnhCham_NTMIX_${Date.now()}.zip`);
+              let content = await zip.generateAsync({type:"blob"}); saveAs(content, `AnhCham_ntmark_${Date.now()}.zip`);
           } catch(e) { alert("Lỗi tạo ZIP"); }
           this.textContent = "📦 Tải ZIP Ảnh"; this.disabled = false;
       };
@@ -9454,7 +9454,7 @@ let qrState = { kind: 'idle' },
     SND: SND
   };
 })();
-// --- BỔ SUNG TÍNH NĂNG TẢI ZIP ẢNH & XUẤT EXCEL CHO NTMIX ---
+// --- BỔ SUNG TÍNH NĂNG TẢI ZIP ẢNH & XUẤT EXCEL CHO ntmark ---
   setTimeout(function() {
       // 1. Tự động chèn nút Tải ZIP vào cạnh nút Tải CSV
       const csvBtn = document.getElementById('csvBtn');
@@ -9476,7 +9476,7 @@ let qrState = { kind: 'idle' },
               this.disabled = true;
               try {
                   let zip = new JSZip(); 
-                  let folder = zip.folder("BaiCham_NTMIX");
+                  let folder = zip.folder("BaiCham_ntmark");
                   for (let i = 0; i < view.length; i++) {
                       let r = view[i]; 
                       let blob = await IMG.get(r.id);
@@ -9487,7 +9487,7 @@ let qrState = { kind: 'idle' },
                       }
                   }
                   let content = await zip.generateAsync({type: "blob"}); 
-                  saveAs(content, `AnhCham_NTMIX_${Date.now()}.zip`);
+                  saveAs(content, `AnhCham_ntmark_${Date.now()}.zip`);
               } catch(e) { 
                   alert("Lỗi tạo file ZIP ảnh: " + e.message); 
               }
@@ -9523,7 +9523,7 @@ let qrState = { kind: 'idle' },
               });
              const wb = XLSX.utils.book_new(); 
               XLSX.utils.book_append_sheet(wb, XLSX.utils.aoa_to_sheet(rows), "BangDiem");
-              XLSX.writeFile(wb, `BangDiem_NTMIX_${Date.now()}.xlsx`);
+              XLSX.writeFile(wb, `BangDiem_ntmark_${Date.now()}.xlsx`);
               
               const msg = document.getElementById('resMsg'); 
               if (msg) msg.textContent = '✅ Đã tải bảng điểm Excel thành công.';
@@ -9928,7 +9928,7 @@ let qrState = { kind: 'idle' },
             if (lists.items[idx].cfg) {
               localStorage.setItem('omr.cfg2', JSON.stringify(lists.items[idx].cfg));
             }
-            sessionStorage.setItem('ntmix.openTab', act);
+            sessionStorage.setItem('ntmark.openTab', act);
             location.reload();
           } else {
             const mItem = document.querySelector('.menu-item[data-target="' + act + '"]');
@@ -9951,7 +9951,7 @@ let qrState = { kind: 'idle' },
               }
             }
             localStorage.setItem('omr.lists', JSON.stringify(lists));
-            sessionStorage.setItem('ntmix.openTab', 'batches');
+            sessionStorage.setItem('ntmark.openTab', 'batches');
             location.reload();
           }
         }
@@ -10223,7 +10223,7 @@ let qrState = { kind: 'idle' },
 
       localStorage.setItem('omr.lists', JSON.stringify(lists));
       localStorage.setItem('omr.cfg2', JSON.stringify(newCfg));
-      sessionStorage.setItem('ntmix.openTab', 'scan');
+      sessionStorage.setItem('ntmark.openTab', 'scan');
       location.reload();
     });
   }
@@ -10234,9 +10234,9 @@ let qrState = { kind: 'idle' },
   }
   renderBatchList();
 
-  const pendingTab = sessionStorage.getItem('ntmix.openTab');
+  const pendingTab = sessionStorage.getItem('ntmark.openTab');
   if (pendingTab) {
-    sessionStorage.removeItem('ntmix.openTab');
+    sessionStorage.removeItem('ntmark.openTab');
     setTimeout(function() {
       const targetMenu = document.querySelector('.menu-item[data-target="' + pendingTab + '"]');
       if (targetMenu) targetMenu.click();
@@ -10284,10 +10284,10 @@ let qrState = { kind: 'idle' },
     const batchName = getActiveBatchName(listbar);
     listbar.style.display = 'none';
 
-    let bar = document.getElementById('ntmixReviewBar');
+    let bar = document.getElementById('ntmarkReviewBar');
     if (!bar) {
       bar = document.createElement('div');
-      bar.id = 'ntmixReviewBar';
+      bar.id = 'ntmarkReviewBar';
       bar.style.cssText = 'margin: 6px 0 12px; padding: 10px 12px; border: 1px solid var(--line); border-radius: 12px; background: var(--bg); display: flex; flex-direction: column; gap: 8px;';
 
       const hasItems = resCard.querySelectorAll('.item').length > 0;
@@ -10476,7 +10476,7 @@ let qrState = { kind: 'idle' },
 // --- ĐIỀU KHIỂN CÀI ĐẶT NHẬN DẠNG Ô TÔ (ĐỘC LẬP) ---
 (function() {
   const DEFAULTS = { minDark: 0.10, minFill: 0.15, eraseRatio: 0.60 };
-  const KEY = 'ntmix.omrSettings';
+  const KEY = 'ntmark.omrSettings';
 
   function loadOmr() {
     try {
@@ -10493,7 +10493,7 @@ let qrState = { kind: 'idle' },
   }
 
   let state = loadOmr();
-  window.NTMIX_OMR_CFG = state;
+  window.ntmark_OMR_CFG = state;
 
   const darkIn = document.getElementById('omrDarkIn');
   const fillIn = document.getElementById('omrFillIn');
@@ -10540,7 +10540,7 @@ let qrState = { kind: 'idle' },
   }
 
   function saveOmr() {
-    window.NTMIX_OMR_CFG = state;
+    window.ntmark_OMR_CFG = state;
     localStorage.setItem(KEY, JSON.stringify(state));
   }
 
@@ -10636,8 +10636,8 @@ let qrState = { kind: 'idle' },
 <script>
 // --- QUẢN LÝ TAB LỚP HỌC, TẠO LỚP MỚI & TẠO BÀI CHẤM TRONG LỚP (ĐỘC LẬP) ---
 (function() {
-  const CLS_KEY = 'ntmix.classes';
-  const PENDING_KEY = 'ntmix.pendingBatchClass';
+  const CLS_KEY = 'ntmark.classes';
+  const PENDING_KEY = 'ntmark.pendingBatchClass';
 
   function getClasses() {
     try {
@@ -10862,7 +10862,7 @@ let qrState = { kind: 'idle' },
               localStorage.setItem('omr.cfg2', JSON.stringify(lists.items[idx].cfg));
             }
           }
-          sessionStorage.setItem('ntmix.openTab', act);
+          sessionStorage.setItem('ntmark.openTab', act);
           location.reload();
         });
       });
@@ -11061,7 +11061,7 @@ let qrState = { kind: 'idle' },
         clsValEl.textContent = cls.name + ' ›';
         clsValEl.style.color = '#ffffff';
       }
-      window.NTMIX_LOCKED_CLASS = cls;
+      window.ntmark_LOCKED_CLASS = cls;
     }
   }
 
@@ -11074,7 +11074,7 @@ let qrState = { kind: 'idle' },
   const confirmBatchBtn = document.getElementById('btnConfirmCreateBatch');
   if (confirmBatchBtn) {
     confirmBatchBtn.addEventListener('click', function() {
-      const cls = window.NTMIX_LOCKED_CLASS;
+      const cls = window.ntmark_LOCKED_CLASS;
       if (cls) {
         sessionStorage.setItem(PENDING_KEY, JSON.stringify({
           classId: cls.id,
@@ -11089,7 +11089,7 @@ let qrState = { kind: 'idle' },
   const outerBatchFab = document.getElementById('btnAddBatchFab');
   if (outerBatchFab) {
     outerBatchFab.addEventListener('click', function() {
-      window.NTMIX_LOCKED_CLASS = null;
+      window.ntmark_LOCKED_CLASS = null;
     }, true);
   }
 
@@ -11179,7 +11179,7 @@ let qrState = { kind: 'idle' },
 
 <script>
 (function() {
-  const CLS_KEY = 'ntmix.classes';
+  const CLS_KEY = 'ntmark.classes';
   const listHost = document.getElementById('clsListContainer');
   if (!listHost) return;
 
@@ -11651,7 +11651,7 @@ let qrState = { kind: 'idle' },
       const searchInp = document.getElementById('clsSearchInput');
       if (searchInp) searchInp.dispatchEvent(new Event('input'));
     } else {
-      sessionStorage.setItem('ntmix.openTab', 'batches');
+      sessionStorage.setItem('ntmark.openTab', 'batches');
       location.reload();
     }
   }
@@ -11749,7 +11749,7 @@ let qrState = { kind: 'idle' },
         localStorage.setItem('omr.cfg2', JSON.stringify(lists.items[idx].cfg));
       }
     }
-    sessionStorage.setItem('ntmix.openTab', 'key');
+    sessionStorage.setItem('ntmark.openTab', 'key');
     location.reload();
   });
 
@@ -12034,7 +12034,7 @@ let qrState = { kind: 'idle' },
               }
             }
           }
-          sessionStorage.setItem('ntmix.openTab', 'scan');
+          sessionStorage.setItem('ntmark.openTab', 'scan');
           location.reload();
         });
 
@@ -12311,16 +12311,16 @@ let qrState = { kind: 'idle' },
         if (liveBtn) liveBtn.click();
       }
     } else {
-      sessionStorage.setItem('ntmix.openTab', targetTab);
-      if (autoAction) sessionStorage.setItem('ntmix.autoAction', autoAction);
+      sessionStorage.setItem('ntmark.openTab', targetTab);
+      if (autoAction) sessionStorage.setItem('ntmark.autoAction', autoAction);
       location.reload();
     }
   }
 
   // Thực thi hành động tự động sau khi tải lại trang (nếu có)
-  const pendingAuto = sessionStorage.getItem('ntmix.autoAction');
+  const pendingAuto = sessionStorage.getItem('ntmark.autoAction');
   if (pendingAuto) {
-    sessionStorage.removeItem('ntmix.autoAction');
+    sessionStorage.removeItem('ntmark.autoAction');
     setTimeout(function() {
       if (pendingAuto === 'pick') {
         const pickInp = document.getElementById('pick');
